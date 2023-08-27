@@ -96,7 +96,7 @@ static const Rule rules[] = {
      */
 
     // class      instance    title       tags mask     isfloating   monitor
-    {"Gimp", NULL, NULL, 0, 1, -1},
+    {"Gimp", NULL, NULL, 0, 0, -1},
     {"Firefox", NULL, NULL, 1 << 8, 0, -1},
 };
 
@@ -109,9 +109,9 @@ static const int resizehints = 1; // 1 means respect size hints in tiled resizal
 #include "layouts.c"
 static const Layout layouts[] = {
     // symbol   arrange function
-    {"[]", tile}, // first entry is default
-    {"[F]", NULL},
-    {NULL, NULL},
+    {"[Tiling]", tile},
+    {"[Maxed]", monocle},
+    {"[Floating]", NULL},
 };
 
 // -------------------------------- Keybindings --------------------------------
@@ -211,6 +211,8 @@ static Key keys[] = {
 
     // rofi
     {MODKEY, XK_r, spawn, SHCMD("rofi -show drun")},
+
+    {MODKEY, XK_l, spawn, SHCMD("light-locker-command -l")},
 
     // Terminal
     {MODKEY, XK_Return, spawn, SHCMD("alacritty")},
