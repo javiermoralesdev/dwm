@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://github.com/javiermoralesdev/dwm.git ~/.config/dwm
+git clone git@github.com:javiermoralesdev/dwm.git ~/.config/dwm
 
 cd ~/.config/dwm
 
@@ -16,8 +16,14 @@ sudo make clean install
 
 sudo cp dwm.desktop /usr/share/xsessions
 
+cp .xprofile $HOME
+
+unzip UbuntuMono.zip
+
+sudo mv *.ttf /usr/share/fonts
+
+rm UbuntuMono.zip readme.md *.txt
+
 cd dwmblocks
 
 sudo make clean install
-
-cp .xprofile $HOME
