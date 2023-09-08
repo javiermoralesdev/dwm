@@ -20,6 +20,4 @@ cd dwmblocks
 
 sudo make clean install
 
-sudo pacman -S pacman-contrib pamixer --noconfirm
-
 cp .xprofile $HOME
