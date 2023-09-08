@@ -206,26 +206,28 @@ static Key keys[] = {
 
     // ------------------- Apps --------------------
 
-    // dmenu
-    {MODKEY | ShiftMask, XK_Return, spawn, {.v = dmenucmd}},
+     
 
     // rofi
-    {MODKEY, XK_r, spawn, SHCMD("rofi -show drun")},
+    {MODKEY, XK_r, spawn, SHCMD("rofi -show drun -show-icons")},
+    {MODKEY, XK_m, spawn, SHCMD("rofi -show")},
 
-    {MODKEY, XK_l, spawn, SHCMD("light-locker-command -l")},
+    // copyq
+    {MODKEY, XK_v, spawn, SHCMD("copyq menu")},
+
+    {MODKEY | ShiftMask, XK_l, spawn, SHCMD("light-locker-command -l")},
 
     // Terminal
     {MODKEY, XK_Return, spawn, SHCMD("alacritty")},
 
     // File explorer
-    {MODKEY, XK_e, spawn, SHCMD("thunar")},
+    {MODKEY, XK_e, spawn, SHCMD("alacritty -e ranger")},
 
     // Browser
     {MODKEY, XK_b, spawn, SHCMD("firefox")},
 
     // Screenshot
-    {MODKEY, XK_s, spawn, SHCMD("scrot")},
-    {MODKEY | ShiftMask, XK_s, spawn, SHCMD("scrot -s")},
+    {MODKEY, XK_s, spawn, SHCMD("scrot -u")},
 
     // ----------------- Hardware ------------------
 
