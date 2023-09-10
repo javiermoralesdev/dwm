@@ -215,7 +215,7 @@ static Key keys[] = {
     // copyq
     {MODKEY, XK_v, spawn, SHCMD("copyq menu")},
 
-    {MODKEY | ShiftMask, XK_l, spawn, SHCMD("light-locker-command -l")},
+    {MODKEY | ControlMask, XK_l, spawn, SHCMD("light-locker-command -l")},
 
     // Terminal
     {MODKEY, XK_Return, spawn, SHCMD("alacritty")},
