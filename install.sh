@@ -4,6 +4,8 @@ git clone git@github.com:javiermoralesdev/dwm.git ~/.config/dwm
 
 cd ~/.config/dwm
 
+mkdir -p ~/.local/bin/volume
+
 g++ volume.cpp -o ~/.local/bin/volume
 
 mkdir -p ~/.local/share/dwm

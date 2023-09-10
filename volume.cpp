@@ -7,18 +7,18 @@
 
 using namespace std;
 
-string get_icon();
+string get_icon(int input);
 string exec(const char *cmd);
 
 int main()
 {
-  cout << exec("pamixer --get-volume");
+  int value = stoi(exec("pamixer --get-volume"));
+  cout << get_icon(value) << " " << value << "% ";
   return 0;
 }
 
-string get_icon(string input)
+string get_icon(int value)
 {
-  int value = std::stoi(input);
   bool isMuted = exec("pamixer --get-mute") == "true";
   if (isMuted)
   {
@@ -27,8 +27,22 @@ string get_icon(string input)
 
   if (value <= 25)
   {
-    return "";
+    return "󰕿";
   }
+
+  if(value <= 50){
+    return "󰖀";
+  }
+
+  if(value <= 75){
+    return "󰕾";
+  }
+
+  if(value <= 100){
+    return "";
+  }
+
+  return "";
 }
 
 string exec(const char *cmd)
