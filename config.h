@@ -206,8 +206,6 @@ static Key keys[] = {
 
     // ------------------- Apps --------------------
 
-     
-
     // rofi
     {MODKEY, XK_r, spawn, SHCMD("rofi -show drun -show-icons")},
     {MODKEY, XK_m, spawn, SHCMD("rofi -show window -show-icons")},
