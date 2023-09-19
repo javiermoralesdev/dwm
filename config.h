@@ -5,7 +5,7 @@ static const unsigned int borderpx = 1;
 // gaps between windows
 static const unsigned int gappx = 6;
 // snap pixel
-static const unsigned int snap = 32;
+unsigned int snap = 32;
 // 0: sloppy systray follows selected monitor, >0: pin systray to monitor X
 static const unsigned int systraypinning = 0;
 // systray spacing
@@ -97,7 +97,7 @@ static const Rule rules[] = {
 
     // class      instance    title       tags mask     isfloating   monitor
     {"Gimp", NULL, NULL, 0, 0, -1},
-    {"Firefox", NULL, NULL, 1 << 8, 0, -1},
+     {"Firefox", NULL, NULL, 1 << 8, 0, -1},
 };
 
 // ---------------------------------- Layouts ----------------------------------
@@ -111,7 +111,7 @@ static const Layout layouts[] = {
     // symbol   arrange function
     {"[Tiling]", tile},
     {"[Maxed]", monocle},
-    {"[Floating]", NULL},
+    {"[Floating]", NULL}
 };
 
 // -------------------------------- Keybindings --------------------------------
@@ -164,8 +164,7 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_k, rotatestack, {.i = -1}},
 
     // Cycle layouts
-    {MODKEY, XK_Tab, cyclelayout, {.i = +1}},
-    {MODKEY | ShiftMask, XK_Tab, cyclelayout, {.i = -1}},
+    {MODKEY, XK_Tab, cyclelayout, {.i = -1}},
 
     // Increase - decrease gaps
     {MODKEY, XK_g, setgaps, {.i = -1}},
