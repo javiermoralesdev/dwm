@@ -221,7 +221,7 @@ static Key keys[] = {
     {MODKEY, XK_e, spawn, SHCMD("alacritty -e ranger")},
 
     // Browser
-    {MODKEY, XK_b, spawn, SHCMD("firefox")},
+    {MODKEY, XK_b, spawn, SHCMD("brave")},
 
     // Screenshot
     {MODKEY, XK_s, spawn, SHCMD("scrot -u")},
