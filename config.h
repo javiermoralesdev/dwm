@@ -222,6 +222,7 @@ static Key keys[] = {
 
     // Browser
     {MODKEY, XK_b, spawn, SHCMD("brave")},
+    {MODKEY | ShiftMask, XK_b, spawn, SHCMD("brave --incognito")},
 
     // Screenshot
     {MODKEY, XK_s, spawn, SHCMD("scrot -u")},
