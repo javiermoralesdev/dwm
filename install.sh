@@ -22,9 +22,13 @@ cp .xprofile $HOME
 
 unzip UbuntuMono.zip
 
+unzip Hack.zip
+
+unzip FiraCode.zip
+
 sudo mv *.ttf /usr/share/fonts
 
-rm UbuntuMono.zip readme.md *.txt
+rm *.zip LICENSE readme.md *.txt
 
 cd dwmblocks
 
