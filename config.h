@@ -225,7 +225,7 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_b, spawn, SHCMD("brave --incognito")},
 
     // Screenshot
-    {MODKEY, XK_s, spawn, SHCMD("scrot -u")},
+    {MODKEY, XK_s, spawn, SHCMD("escrotum -s")},
 
     // ----------------- Hardware ------------------
 
