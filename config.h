@@ -157,7 +157,7 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_f, togglefloating, {0}},
 
     // Toggle bar
-    {MODKEY | ShiftMask, XK_h, togglebar, {0}},
+    //{MODKEY | ShiftMask, XK_h, togglebar, {0}},
 
     // Move windows in current stack
     {MODKEY | ShiftMask, XK_j, rotatestack, {.i = +1}},
