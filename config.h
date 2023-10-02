@@ -207,7 +207,7 @@ static Key keys[] = {
 
     // rofi
     {MODKEY, XK_r, spawn, SHCMD("rofi -show drun -show-icons")},
-    {MODKEY, XK_m, spawn, {.v = dmenucmd }},
+    {MODKEY, XK_m, spawn, SHCMD("rofi -show window -show-icons")},
 
     // copyq
     {MODKEY, XK_v, spawn, SHCMD("copyq menu")},
