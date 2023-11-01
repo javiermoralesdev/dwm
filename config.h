@@ -78,15 +78,15 @@ static const char *colors[][3] = {
 // -------------------------------- Workspaces ---------------------------------
 
 static const char *tags[] = {
-    "   ",
-    "   ",
-    "   ",
-    "   ",
-    "  ",
-    "   ",
-    "   ",
-    " 󰋩  ",
-    " 󰌨  ",
+    "I",
+    "II",
+    "III",
+    "IV",
+    "V",
+    "VI",
+    "VII",
+    "VIII",
+    "IX",
 };
 
 static const Rule rules[] = {
@@ -97,7 +97,7 @@ static const Rule rules[] = {
 
     // class      instance    title       tags mask     isfloating   monitor
     {"Gimp", NULL, NULL, 0, 0, -1},
-     {"Firefox", NULL, NULL, 1 << 8, 0, -1},
+    {"Firefox", NULL, NULL, 1 << 8, 0, -1},
 };
 
 // ---------------------------------- Layouts ----------------------------------
@@ -111,8 +111,7 @@ static const Layout layouts[] = {
     // symbol   arrange function
     {"[Tiling]", tile},
     {"[Maxed]", monocle},
-    {"[Floating]", NULL}
-};
+    {"[Floating]", NULL}};
 
 // -------------------------------- Keybindings --------------------------------
 
@@ -221,8 +220,8 @@ static Key keys[] = {
     {MODKEY, XK_e, spawn, SHCMD("alacritty -e ranger")},
 
     // Browser
-    {MODKEY, XK_b, spawn, SHCMD("brave")},
-    {MODKEY | ShiftMask, XK_b, spawn, SHCMD("brave --incognito")},
+    {MODKEY, XK_b, spawn, SHCMD("firefox")},
+    {MODKEY | ShiftMask, XK_b, spawn, SHCMD("firefox --private-window")},
 
     // Screenshot
     {MODKEY, XK_s, spawn, SHCMD("escrotum -s")},
