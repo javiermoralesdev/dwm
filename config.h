@@ -78,15 +78,15 @@ static const char *colors[][3] = {
 // -------------------------------- Workspaces ---------------------------------
 
 static const char *tags[] = {
-    "I",
-    "II",
-    "III",
-    "IV",
-    "V",
-    "VI",
-    "VII",
-    "VIII",
-    "IX",
+    "   ",
+    "   ",
+    "   ",
+    "   ",  
+    "  ",
+    "   ",
+    "   ",
+    " 󰋩  ",
+    " 󰌨  ",
 };
 
 static const Rule rules[] = {
@@ -143,8 +143,8 @@ static Key keys[] = {
     // ------------------ Windows ------------------
 
     // Switch between windows
-    {MODKEY, XK_j, focusstack, {.i = +1}},
-    {MODKEY, XK_k, focusstack, {.i = -1}},
+    {MODKEY, XK_Left, focusstack, {.i = +1}},
+    {MODKEY, XK_Right, focusstack, {.i = -1}},
 
     // Change window sizes
     {MODKEY, XK_i, incnmaster, {.i = +1}},
@@ -159,8 +159,8 @@ static Key keys[] = {
     //{MODKEY | ShiftMask, XK_h, togglebar, {0}},
 
     // Move windows in current stack
-    {MODKEY | ShiftMask, XK_j, rotatestack, {.i = +1}},
-    {MODKEY | ShiftMask, XK_k, rotatestack, {.i = -1}},
+    {MODKEY | ShiftMask, XK_Left, rotatestack, {.i = +1}},
+    {MODKEY | ShiftMask, XK_Right, rotatestack, {.i = -1}},
 
     // Cycle layouts
     {MODKEY, XK_Tab, cyclelayout, {.i = -1}},
@@ -178,8 +178,8 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_comma, tagmon, {.i = -1}},
 
     // Change color scheme
-    {MODKEY, XK_Left, schemeToggle, {0}},
-    {MODKEY, XK_Right, schemeCycle, {0}},
+    //{MODKEY, XK_Left, },
+    //{MODKEY, XK_Right, schemeCycle, {0}},
 
     // Kill window
     {MODKEY, XK_w, killclient, {0}},
@@ -203,6 +203,9 @@ static Key keys[] = {
                                     TAGKEYS(XK_9, 8)
 
     // ------------------- Apps --------------------
+    
+    //dmenu
+    { MODKEY|ShiftMask, XK_Return, spawn, {.v = dmenucmd } },
 
     // rofi
     {MODKEY, XK_r, spawn, SHCMD("rofi -show drun -show-icons")},
@@ -220,8 +223,9 @@ static Key keys[] = {
     {MODKEY, XK_e, spawn, SHCMD("alacritty -e ranger")},
 
     // Browser
-    {MODKEY, XK_b, spawn, SHCMD("firefox")},
-    {MODKEY | ShiftMask, XK_b, spawn, SHCMD("firefox --private-window")},
+    {MODKEY, XK_b, spawn, SHCMD("brave")},
+    {MODKEY | ControlMask, XK_b, spawn, SHCMD("brave \"--profile-directory=Profile 1\"")},
+    {MODKEY | ShiftMask, XK_b, spawn, SHCMD("brave --incognito")},
 
     // Screenshot
     {MODKEY, XK_s, spawn, SHCMD("escrotum -s")},
